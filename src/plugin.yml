@@ -1,0 +1,24 @@
+name: ActiveShop
+main: com.craftroot.activeshop.ActiveShop
+version: 0.0.1
+authors: [CraftRoot]
+description: A shop plugin with changing prices based on supply and demand.
+commands:
+    activeshop:
+        aliases: [as, ashop, shop]
+        description: Access ActiveShop commands
+        usage: |
+               /<command>
+permissions:
+    activeshop.user.list:
+        description: View the shop list
+    activeshop.user.buy:
+        description: Buy items from the shop
+    activeshop.user.sell:
+        description: Sell items to the shop
+    activeshop.*:
+        description: All ActiveShop permissions
+        children:
+            activeshop.user.list: true
+            activeshop.user.buy: true
+            activeshop.user.sell: true
